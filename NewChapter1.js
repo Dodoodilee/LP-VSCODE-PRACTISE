@@ -262,3 +262,5 @@ function getTourstDetails(users) {
 
 console.log(getTourstDetails(18));
 console.log(getTourstDetails(17));
+
+// till here Chapters 25 of learn programming are fully understood and completed :D
