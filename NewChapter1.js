@@ -264,3 +264,35 @@ console.log(getTourstDetails(18));
 console.log(getTourstDetails(17));
 
 // till here Chapters 25 of learn programming are fully understood and completed :D
+
+// Practising Chapter 26 Implicit Returns (UNDEFINED)
+
+function laptopBrand(name) {
+  name.length;
+}
+
+console.log(laptopBrand("ASUS"));
+
+function travelCompanion(age) {
+  if (age === 18) {
+    return "You Are Eligible To Travel As A Companion";
+  }
+  if (age < 15) {
+  } // Since we are missing return here javascript will simply return undefined this is called Implicit Return !
+}
+
+console.log(travelCompanion(18));
+console.log(travelCompanion(14));
+
+// chapter 27 conditional double call
+
+function triple() {
+  console.log("This Will Triple");
+}
+function funnyCall(genuine) {
+  if (genuine === true) {
+    return triple();
+  }
+}
+
+console.log(triple());
