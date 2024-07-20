@@ -284,15 +284,376 @@ function travelCompanion(age) {
 console.log(travelCompanion(18));
 console.log(travelCompanion(14));
 
-// chapter 27 conditional double call
+// chapter 27 conditional double call functions which can handle more complex scenarios
+
+function double() {
+  console.log("this will double the number");
+}
 
 function triple() {
-  console.log("This Will Triple");
+  console.log("this will triple the number");
 }
-function funnyCall(genuine) {
-  if (genuine === true) {
+
+function run(operation) {
+  if (operation === "double") {
+    return double();
+  }
+  if (operation === "triple") {
     return triple();
   }
 }
 
-console.log(triple());
+console.log(run("double", 500));
+// chapter  28 conditional calls functions
+
+function double(x) {
+  return x * 2;
+}
+
+function triple(x) {
+  return x * 3;
+}
+
+function run(operation, x) {
+  if (operation === "double") {
+    return double(x);
+  }
+  if (operation === "triple") {
+    return triple(x);
+  }
+}
+
+console.log(run("double", 50));
+console.log(run("triple", 100));
+
+// Chapter 31 Booleans lOgical situations
+
+function getVotingResults(votes) {
+  if (votes > 18) {
+    return " you are allowed to vote";
+  } else {
+    return " you are not allowed to vote ";
+  }
+}
+
+console.log(getVotingResults(20));
+console.log(getVotingResults(15));
+
+function sellCows(animals) {
+  if (animals < 5) {
+    return " dont sell your cows for electricity ";
+  } else {
+    return "sell them ";
+  }
+}
+
+console.log(sellCows(4));
+
+// chapter 34 Else And Else If
+
+function getGradesScale(grade) {
+  if (grade >= 21) {
+    return "A";
+  } else if (grade >= 15) {
+    return "B";
+  } else {
+    return "F";
+  }
+}
+
+console.log(getGradesScale(22));
+console.log(getGradesScale(16));
+console.log(getGradesScale(5));
+
+// Chapter 37 if without the else keyword :D
+
+function getFrenchVisaEligibilityStatus(history) {
+  if (history >= 5) {
+    return " you have a good international travel history";
+  }
+  return " You will not be eligible for a french visa as you have no travel history ";
+}
+
+console.log(getFrenchVisaEligibilityStatus(6));
+console.log(getFrenchVisaEligibilityStatus(1));
+console.log(
+  "getFrenchVisaEligibilityStatus(6):",
+  getFrenchVisaEligibilityStatus(6)
+);
+
+// Chapter 38 booleans shortcuts :D
+
+function canVote(age) {
+  return age >= 18;
+}
+
+console.log(canVote(20));
+console.log(canVote(15));
+console.log("canVote(20):", canVote(20));
+
+function getApplicantsAddress(location) {
+  if (location === "Europe") {
+    return " You May Participate In Climate Conference";
+  }
+  return " You Cannot Participate";
+}
+
+console.log(getApplicantsAddress("Europe"));
+console.log(getApplicantsAddress("Asia"));
+
+// Chapter 39 String Concatenation Yaaaaaaaaaay !
+
+let message = "Welcome To The World Of Dorian & Sophie";
+console.log(message);
+
+let testingStringConcateNation = "Welcome " + "Sophie";
+console.log(testingStringConcateNation);
+
+function testingStringConcate(gluing) {
+  return "You are " + gluing + " years old";
+}
+
+console.log(testingStringConcate(25));
+
+function greetUser(name) {
+  return "Welcome, " + name;
+}
+
+console.log(greetUser("Andromede"));
+console.log(greetUser("Nova"));
+console.log(greetUser("Tora"));
+console.log(greetUser("Orion"));
+
+function emailConfirmation(email) {
+  return "we just sent an to " + email + " please check your inbox";
+}
+console.log("email Confirmation;", emailConfirmation("iamyourdodoo@gmail.com"));
+
+function returningFullNames(firstName, lastName) {
+  return firstName + " " + lastName;
+}
+
+console.log("returningFullNames;", returningFullNames("Dorian", "Daniel"));
+
+// Chapter 40 String Interpolation & Template Strings ( I Miss My Andromede ) Strings defined with backs ticks are called template strings
+
+function showEmailConfirmation(email) {
+  return `We just sent an email to ${email}. Please check your inbox.`;
+}
+
+console.log(showEmailConfirmation("iamyourdodoo@gmail.com"));
+
+function definingFullName(firstName, lastName) {
+  return `${firstName}, ${lastName}`;
+}
+
+console.log("defininingFullName:", definingFullName("Dorian", "Daniel"));
+
+// Chapter 41 Arrays & Why Do We need Them !
+
+let inbox = []; // this is example of an empty array
+
+// Chapter 42 Index Arrays & reading arrays values (remember the index starts from 0)
+
+let grades = [1, 2, 3, 4, 5];
+
+let fourthGrade = grades[3];
+
+console.log(grades[3]);
+
+// Chapter 43 Fucntions with array parameters ! How To read iteams from an array !
+
+let temperatures = [0, -1, -5, 7, 9, 10];
+
+let secondTemperatures = temperatures[2];
+
+console.log(temperatures[2]);
+
+function studentGrades(digits) {
+  return digits[(0, 2)];
+}
+
+console.log(studentGrades([11, 17, 21, 55, 6]));
+console.log("studentGrades:", studentGrades([51, 52, 53, 99]));
+
+function gettingFullNames(completename) {
+  return `${completename[0]} ${completename[1]} ${completename[2]}`;
+}
+
+console.log(gettingFullNames(["Madame", "Le", "Pen"]));
+
+function frenchPresidentDetails(president) {
+  return `The Current President Of France Is ${president}`;
+}
+
+console.log(
+  "frenchPresidentDetails:",
+  frenchPresidentDetails("Emmanuel Macron")
+);
+
+function describeUsersLocation(user, postcode, country) {
+  return ` ${user} is located at ${postcode} ${country}`; // Please dont forget the syntax (you can specify more locations too remmeber using string interpolation)
+}
+
+console.log(
+  "describingUsersLocation:",
+  describeUsersLocation("Dododile", 51050, "Lafrance") // please dont forget the syntax Chapter 43 Last Lesson ! remember to access the first location paramater and the second
+);
+
+function comprehensiveUserData(name, [age, gender, membersince]) {
+  // REMEMBER [ ] ADD IN CONSOLE.LOG TOO
+  return `The current user data ${name} ${age} ${gender} ${membersince}`;
+}
+
+console.log(
+  "comprehensiveUserData:",
+  comprehensiveUserData("DinguDile", [21, "male", 2023]) // REMEMBER TO ADD [ ] AS PER SYNTAX
+);
+
+// Chapter 45 Changing or updating array item
+
+let temperature = [41, 52, 61, 23, 11];
+temperature[2] = 20;
+console.log(temperature[2]);
+
+function fixgrades(gradez) {
+  gradez[0] = 7;
+  return gradez;
+}
+
+console.log(fixgrades([1, 2, 3, 4])); // Attention Syntax
+
+function fixingSecondScore(score) {
+  score[2] = 85;
+  return score;
+}
+
+console.log("fixingSecondScore:", fixingSecondScore([10, 15, 20, 35, 45, 75]));
+
+// Chapter 46 we learned how to access last item of array by array.length -1 only , accessing first item is by [0] and total by arrays.length
+
+// Experiments for Sophie :D
+
+function constructionProjectDetails(architect, [designer, engineer]) {
+  return `The following Proeject's ${architect} ${designer} ${engineer} are internationally recoginzed and well respected individuals`;
+}
+
+console.log(
+  "constructionProjectDetaisl:",
+  constructionProjectDetails("Sophie", ["Andromede", "Dododile"])
+);
+
+function cyberSecuritySpecialits(Offensive, defensive) {
+  return `This Individual ${Offensive} is the best for penetration testing. while this individual ${defensive} is best for protecting system in defence against attacks`;
+}
+
+console.log(
+  "cyberSecuritySpecialits:",
+  cyberSecuritySpecialits("Nova", "Orion")
+);
+
+function gettingCompleteName(firstName, lastName) {
+  return firstName + " " + lastName;
+}
+
+console.log("gettingCompleteName:", gettingCompleteName("Dodo", "Dile"));
+
+function everyInformation(name, age, gender, city, country) {
+  return `${name} ${name.length} ${age} ${gender} ${city} ${country}`;
+}
+
+console.log(
+  "everyInformation:",
+  everyInformation("Dododile", 21, "Male", "Paris", "Germany")
+);
+
+// Chapter 48 Adding New Items into the arrays , We use the Arrays.push() method
+
+function addingNewResults(result) {
+  result.push(51);
+  return result;
+}
+
+console.log("addingNewResults:", addingNewResults([10, 12, 3, 15, 17]));
+
+// Chapter 50 Array.includes() is to check if the array contains the certain item we are looking for ! Array.inclues() returns a boolean !
+
+function testingArrayIncludes(including) {
+  return including.includes(5);
+}
+
+console.log("testingArrayIncludes:", testingArrayIncludes([7, 8, 9, 10]));
+
+// Chapter 51 Array.join() methods converts numbers intro strings and glues what you provide to it in the array.join(glue) . Another definition is that it converts Arrays into Strings
+// CSV MEANS COMMA SEPARATED VALUES (", ") ARRAY.JOIN(", ")
+
+function convertToString(grades) {
+  return grades.join(";"); // for csv we can grades.join(", ") add anything in between " "
+}
+
+// Chapter 54 Array.forEach() Mehtod : So this method is like for writing things vertically iin programming world we call it iterating of array over every array item
+
+// a function without a name is called Anonymous function :D you can drop the name if you want .
+
+// Remember to Shift from Array to Array item but shifting you gear from Plural to Singular as done in the example below ! this is very important .
+
+// Remember the syntax syntax and syntax this is especially for me and myself Mr Dorian Daniel
+
+let vehicles = [5, 6, 7, 8, 9, 10];
+
+vehicles.forEach(function (vehicle) {
+  // see this shift
+  console.log(vehicle); // the shifting from plural to singular / the shifting from array to array item
+});
+
+// Chapter 55 wrapping into functions calculatin sum of array numbers
+
+function gatherAllInformation(informations) {
+  let sum = 0;
+  informations.forEach(function (information) {
+    sum = sum + information;
+  });
+  return sum;
+}
+
+console.log("gatherAllInformations:", gatherAllInformation([200, 300, 400]));
+
+// Chapter 57 Summing arrays with conditions suppose we would like to sum specific numbers in array !
+
+function calculatingSpecificFahrenheits(fahrenheits) {
+  let sum = 0;
+
+  fahrenheits.forEach(function (fahrenheit) {
+    if (fahrenheit >= 25) sum = sum + fahrenheit;
+  });
+  return sum;
+}
+
+console.log(
+  "calculatingSpecificFahrenheits:",
+  calculatingSpecificFahrenheits([20, 30, 40]) // so by add an if conditon into the function we just calculated array items which were above 25
+);
+
+// Chapter 58 Array.Map Methods :D the purpose of .map() method is to tramsform the values. REMEMBER ARRAY.MAP HAS 2 RETURNS
+
+function increasingEmployees(employes) {
+  return employes.map(function (employe) {
+    return employe + 2;
+  });
+}
+
+console.log("increasingEmployees:", increasingEmployees([5, 8, 13, 18]));
+console.log("We Have Increased 2 Employees In Every Department");
+
+function multiplyingStockOutputs(totalstocks) {
+  return totalstocks.map(function (totalstock) {
+    return totalstock * 2;
+  });
+}
+
+console.log(
+  "We Have Doubled The Stock In SuperMarkets Due to High Demand For Every Item:",
+  multiplyingStockOutputs([100, 200, 300, 400, 500])
+);
+
+// Chapter 59 Array.reduce() method used to calculate a single value from an array  & converts an array into a single value
