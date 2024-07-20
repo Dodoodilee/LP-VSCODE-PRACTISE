@@ -656,4 +656,4 @@ console.log(
   multiplyingStockOutputs([100, 200, 300, 400, 500])
 );
 
-// Chapter 59 Array.reduce() method used to calculate a single value from an array  & converts an array into a single value
+// Chapter 59 Array.reduce() method used to calculate a single value from an array  & converts an array into a single values
