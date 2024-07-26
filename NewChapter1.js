@@ -576,7 +576,7 @@ function addingNewResults(result) {
 
 console.log("addingNewResults:", addingNewResults([10, 12, 3, 15, 17]));
 
-// Chapter 50 Array.includes() is to check if the array contains the certain item we are looking for ! Array.inclues() returns a boolean !
+// Chapter 50 Array.includes() is to check if the array contains the certain item we are looking for ! Array.includes() returns a boolean !
 
 function testingArrayIncludes(including) {
   return including.includes(5);
@@ -634,7 +634,7 @@ console.log(
   calculatingSpecificFahrenheits([20, 30, 40]) // so by add an if conditon into the function we just calculated array items which were above 25
 );
 
-// Chapter 58 Array.Map Methods :D the purpose of .map() method is to tramsform the values. REMEMBER ARRAY.MAP HAS 2 RETURNS
+// Chapter 58 Array.Map Methods :D the purpose of .map() method is to tramsform the existing arrays into new ones .
 
 function increasingEmployees(employes) {
   return employes.map(function (employe) {
@@ -643,7 +643,7 @@ function increasingEmployees(employes) {
 }
 
 console.log("increasingEmployees:", increasingEmployees([5, 8, 13, 18]));
-console.log("We Have Increased 2 Employees In Every Department");
+console.log("We Have Increased 2 Employees In Every Department"); // << just like here in this example we had 5 8 13 18 and we updated or transformed them into what we wanted by adding 2 to each
 
 function multiplyingStockOutputs(totalstocks) {
   return totalstocks.map(function (totalstock) {
@@ -657,3 +657,19 @@ console.log(
 );
 
 // Chapter 59 Array.reduce() method used to calculate a single value from an array  & converts an array into a single values
+// we can calculate or multiply using reducemethod or .forEach method both of them are ok .
+
+// Using .forEach
+
+//let sum = 0
+//numbers.forEach(function(number) {
+// sum = sum + number
+//})
+
+// Using .reduce
+
+// let sum = numbers.reduce(function(total, current) { // the reduce method has reducer which is total and current
+//  return total + current
+//}, 0) // << 0 is named as initial value to add we use 0 and to multiply we use 1 dont forget this !
+
+// REVISE CHAPTER 59 AND 60
