@@ -769,6 +769,8 @@ console.log(doubleQuote);
 
 // CHAPTER 66
 
+// the logical  and must satify both the mentioned conditions and the logical or must satify atleast one condition !!
+
 function applyDiscount(age) {
   if (age >= 18 && age >= 50) {
     return " You Will Get A 50% Discount";
@@ -779,3 +781,32 @@ function applyDiscount(age) {
 
 console.log("applyDiscount:", applyDiscount(25)); // We used && operator so the user dosent gets a discount because he is greated than 18 but less than 60
 console.log("applyDiscount:", applyDiscount(60)); // this user gets a discount because because he satisfies both the conditions of the and operator !
+
+// Logical Or Operator with advanced if conditions Chapter 66 !
+
+function systemAdministrator(admin, systemcontroller) {
+  if (admin === "Admin" || systemcontroller === "True") {
+    return "Access Granted";
+  } else {
+    return "You Do Not Have Access To The Data";
+  }
+}
+
+console.log("systemAdministrator:", systemAdministrator("Admin", "True"));
+console.log("systemAdministrator:", systemAdministrator("GUESTUSER", "false"));
+console.log("systemAdminsitrator:", systemAdministrator("Unknown"));
+
+// Logical And Operators && (Remmbember this must satisfy both the conditions)
+
+function experiencedDoctors(experience, surgeriesPerformed) {
+  if (experience >= 15 && surgeriesPerformed >= 30) {
+    return " You Are Welcome To Join Our Hospital And Become Part Of The Most Experience Doctors In France";
+  } else {
+    return " You Do Not Hold Enough Experience As Per Our Criteria We No Longer Will Be Considering Your Application";
+  }
+}
+
+console.log("experiencedDoctors:", experiencedDoctors(15, 31));
+console.log("experiencedDoctors:", experiencedDoctors(15, 29));
+
+// Chapter 67 Semi Colons In Javascript & Uses
