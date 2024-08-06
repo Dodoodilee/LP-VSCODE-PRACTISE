@@ -672,4 +672,110 @@ console.log(
 //  return total + current
 //}, 0) // << 0 is named as initial value to add we use 0 and to multiply we use 1 dont forget this !
 
-// REVISE CHAPTER 59 AND 60
+// Chapter 61 , Arrays Of Strings :D Pretty Much the same as Array of Numbers ! remmeber same syntaxes and javascript also does not distinguish between them
+
+// Adding New Item Into Array of strings using the push Method
+
+function addBananas(items) {
+  items.push("Banana");
+  return items;
+}
+
+console.log(addBananas(["Milk"]));
+
+// iterating with Arrays.push
+
+let regsiteredUsers = ["dododile", "dingudile", "juniorDile", "seniorDile"];
+
+regsiteredUsers.forEach(function (regsiteredUser) {
+  console.log(regsiteredUser);
+});
+
+let exGovernors = ["Stevejobs", "PresidentBush", "PresidentObama"];
+
+let lowerCased = exGovernors.map(function (exGovernor) {
+  return exGovernor.toLowerCase();
+});
+
+console.log(lowerCased);
+
+// .includes Methods returns boolean only
+
+function currentManagers(manager, notmanager) {
+  return manager.includes(notmanager);
+}
+
+console.log("currentManagers:", currentManagers(["Ali", "Sophia"], "Sophia")); // remember we wrote sophia in the end again to see if she is included as a manager
+console.log("currentManagers:", currentManagers(["Khan", "MrRICKY"], "doko")); // now since doko is not including in the list it returns false
+
+// .join method CSV ( csv means comma separated values )
+
+function allPeoples(people) {
+  return people.join(", ");
+}
+
+console.log("allPeoples:", allPeoples(["Ali", "Andromdede", "belovedDingu"]));
+
+function toUppercased(fullnames) {
+  return fullnames.map(function (fullname) {
+    // .MAP METHODS
+    return fullname.toUpperCase();
+  });
+}
+
+console.log("toUppercased:", toUppercased(["khan"]));
+
+let strings = ["abc", "def", "ghi", "jkl"];
+
+let chars = strings.map(function (string) {
+  return string[0]; // accessing every first alphabet from values
+});
+console.log(chars);
+
+// Chaining And Without Chaining Mehtods are used to perform multiple operations on a function :D // Please See Chapter 63
+
+// Chapter 64 Strings In Depth strings with doube quoties and single back tick charactes also known as ` template strings . rememebr to add \ before the character !!
+
+let testingMessage = `Welcome To Dodo\'s website`; // REMEMBER THE BACK SLASH \ when using template strings :D
+console.log(testingMessage);
+
+let testMessage = `This is Sam's website and it's "awesome"!`;
+console.log(testMessage);
+
+let doubleQuote = 'This is "awesome"  !'; // REMMEBER this is how we do with doube quote strings :D
+console.log(doubleQuote);
+
+// Chapter 65 Logical And , Logical Or operators
+
+//The logical And operator allows you to chain 2 expressions together and will only return true when both of the expressions evaluate as true.
+
+//   The && operator has one expression on its left and one expression on its right. It only evaluates to true when both expressions are true, so here are all the possible scenarios as well as their result:
+
+//true && true   // true
+//true && false  // false
+//false && true  // false
+//false && false // false
+
+// Logical Or operator ||
+//The logical Or operator evaluates to true when at least one of the 2 expressions is true. This means that as long as one of the 2 expressions is true, it will evaluate to true.
+//So then there's only one case when it evaluates to false, and that is when both expressions are false.
+
+//true || true   // true
+//true || false  // true
+//false || true  // true
+//false || false // false
+
+// Invert Booleans !
+
+// CHAPTER 66
+
+function applyDiscount(age) {
+  if (age >= 18 && age >= 50) {
+    return " You Will Get A 50% Discount";
+  } else {
+    return "No Discount";
+  }
+}
+
+console.log("applyDiscount:", applyDiscount(25)); // We used && operator so the user dosent gets a discount because he is greated than 18 but less than 60
+console.log("applyDiscount:", applyDiscount(60)); // this user gets a discount because because he satisfies both the conditions of the and operator !
