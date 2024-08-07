@@ -809,4 +809,4 @@ function experiencedDoctors(experience, surgeriesPerformed) {
 console.log("experiencedDoctors:", experiencedDoctors(15, 31));
 console.log("experiencedDoctors:", experiencedDoctors(15, 29));
 
-// Chapter 67 Semi Colons In Javascript & Uses /
+// Chapter 68 Introduction to objects in javascript !
