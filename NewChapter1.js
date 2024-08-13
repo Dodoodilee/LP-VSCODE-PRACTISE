@@ -810,3 +810,50 @@ console.log("experiencedDoctors:", experiencedDoctors(15, 31));
 console.log("experiencedDoctors:", experiencedDoctors(15, 29));
 
 // Chapter 68 Introduction to objects in javascript !
+
+let individalDetaisl = {
+  firstName: "Dodo",
+  lastName: "Dile",
+  age: 30,
+  country: "Europe",
+  occupation: "Softare Engineer",
+};
+
+console.log("Individual Details:", individalDetaisl);
+console.log(individalDetaisl.firstName.toUpperCase());
+console.log(individalDetaisl.lastName[0]);
+console.log(
+  individalDetaisl.occupation[
+    individalDetaisl.occupation.length - 1
+  ].toUpperCase()
+);
+
+// Chapter 69 Working With Objects
+function getUsersFullInformation(User) {
+  return `${User.firstName.toUpperCase()}  ${User.lastName.toUpperCase()} ${
+    User.city
+  } ${User.Age}  `;
+}
+let user1 = {
+  firstName: "Andromede",
+  lastName: "Dodo",
+  Age: 21,
+  location: "France",
+  occupation: "Student",
+  city: "Paris",
+  ID: 2101734200,
+};
+user1.Age = 25;
+
+let user2 = {
+  firstName: "Nova",
+  lastName: "Dodo",
+  Age: 20,
+  location: "Switzerland",
+  occupation: "Cat",
+  city: "Geneva",
+  ID: 7137007,
+};
+
+console.log("getUsersFullInformation:", getUsersFullInformation(user1));
+console.log("getUsersFullInformation:", getUsersFullInformation(user2));
