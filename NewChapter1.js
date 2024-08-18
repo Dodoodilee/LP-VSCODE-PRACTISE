@@ -832,7 +832,7 @@ console.log(
 function getUsersFullInformation(User) {
   return `${User.firstName.toUpperCase()}  ${User.lastName.toUpperCase()} ${
     User.city
-  } ${User.Age}  `;
+  } ${User.Age} ${User.ID}  `;
 }
 let user1 = {
   firstName: "Andromede",
@@ -857,3 +857,66 @@ let user2 = {
 
 console.log("getUsersFullInformation:", getUsersFullInformation(user1));
 console.log("getUsersFullInformation:", getUsersFullInformation(user2));
+console.log(user1.ID);
+console.log(user2.ID);
+
+// Chapter 70 Nested And Mixed Objects ! in this chapter we learned that objects can have objects too , functions too and methods as well !
+
+let student = {
+  firstName: "Dorian",
+  lastName: "Daniel",
+  location: "Oslo",
+  ID: 333777,
+  currentCourse: {
+    // this is an example of Nested Object which means object inside and object .
+    course: "Bachelors Degree",
+    year: 2024,
+  },
+};
+
+console.log(
+  "Accessing Student Information:",
+  student.firstName,
+  student.lastName,
+  student.ID,
+  student.currentCourse.course
+);
+
+// Deeply Nested Objects Examples
+
+let course = {
+  name: "Learn Programming",
+  instructor: {
+    name: {
+      first: "Andromede",
+      middleName: "Orion",
+      last: "Nova",
+    },
+    isProgrammer: true,
+  },
+  content: {
+    dataTypes: true,
+    functions: true,
+    classes: true,
+    dom: false,
+  },
+};
+
+console.log(course.instructor.isProgrammer);
+console.log(course.content.dataTypes);
+
+// Objects with functions example !
+
+let user = {
+  firstName: "Sir Keir Starmer",
+  lastName: "Sr.Starmer",
+  age: 21,
+  canVote: function (age) {
+    return age >= 18;
+  },
+};
+
+console.log(user.canVote(25));
+console.log(user.canVote(15));
+
+// Chapter 72 Arrays Of Objects
