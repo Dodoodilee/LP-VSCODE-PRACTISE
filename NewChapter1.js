@@ -919,4 +919,33 @@ let user = {
 console.log(user.canVote(25));
 console.log(user.canVote(15));
 
-// Chapter 72 Arrays Of Objects
+// Chapter 72 Arrays Of Objects this chapter is pretty much the same as Objects chapter . Arrays contains objects and objects are defined as items
+
+let recipes = [
+  {
+    title: "Noodles",
+    ingredients: ["Water, Seasoning, Chillies"], // this is item one of Array
+    timeRequired: 25,
+    rating: 3.7,
+  },
+  {
+    title: "Andromede's Delicious Waffles ",
+    ingredients: "i dont know ",
+    timeRequired: 25,
+    rating: 5,
+  },
+  {
+    title: "Momcats Food",
+    ingredients: "Boiled Chicken",
+    timeRequired: 15,
+    rating: 5,
+  },
+];
+
+recipes.forEach(function (recipe) {
+  console.log(recipe); // check chapter 72 for this ! what this has done is it has repeated the results !
+});
+
+console.log(recipes[0]);
+console.log(recipes[1], recipes[2]);
+console.log(recipes[0].ingredients);
