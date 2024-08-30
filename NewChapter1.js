@@ -943,9 +943,55 @@ let recipes = [
 ];
 
 recipes.forEach(function (recipe) {
-  console.log(recipe); // check chapter 72 for this ! what this has done is it has repeated the results !
+  // check chapter 72 for this conecept .
+  console.log(recipe);
 });
 
 console.log(recipes[0]);
-console.log(recipes[1], recipes[2]);
+console.log(recipes[1]);
 console.log(recipes[0].ingredients);
+
+// Chapter 74 : CLASSES allows us to groups all the variables , functions together . variables in class are properties . and the functions inside are called methods
+// Classes have a very important concept called Instantiation .
+// We use UpperCamelCase
+
+class Recipe {}
+// this is an empty class
+
+// Chapter 75 Constructor , contructor is a function inside of class ! constructor is automatically called in class
+
+class Items {
+  constructor() {}
+}
+
+//
+
+class User {
+  constructor(firstName, lastName) {
+    console.log("creating instance user");
+    console.log(firstName);
+    console.log(lastName);
+  }
+}
+
+let sam = new User("Sam", "KhanaKharabDa"); // these are instances
+let dingu = new User("Dingu", "theFrog"); // these are instances .
+
+// Another EXAMPLE OF CLASS WITH CONSTRUCTOR PARAMETERS AND MULTIPLE INSTANCES
+
+class FullMeal {
+  constructor(mealName, totalCalories) {
+    console.log(
+      "This Is The Complete Meal And Its Estimated Calories Mentioned"
+    );
+    console.log(mealName, totalCalories);
+  }
+}
+
+let meal1 = new FullMeal("French Chicken Sandwich", 800);
+let meal2 = new FullMeal(
+  "The New Vegetarian Parisian Salad Inspired By DodoDile",
+  300
+);
+
+// Chapter 76 Instance Varibles in Constructors this.
