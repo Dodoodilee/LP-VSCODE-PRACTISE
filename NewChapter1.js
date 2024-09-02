@@ -990,8 +990,135 @@ class FullMeal {
 
 let meal1 = new FullMeal("French Chicken Sandwich", 800);
 let meal2 = new FullMeal(
-  "The New Vegetarian Parisian Salad Inspired By DodoDile",
+  "The New Vegetarian Parisian Salad Inspired By DodoDile", // this is class Usage
   300
 );
 
-// Chapter 76 Instance Varibles in Constructors this.
+// Chapter 76 Instance Varibles in Constructors (this.)
+
+class School {
+  constructor() {
+    this.schoolName = "School 42"; // these are  instance variables
+    this.location = "Paris";
+    this.totalStudents = 125;
+  }
+}
+// this is hardcoded
+let school = new School(); // this is class usage
+
+console.log(school); // remmeber to use the class declared variable .
+
+// Assigning INSTANCE Variables to contructor parameters .
+
+class EmployeesData {
+  constructor(name, age, status, location) {
+    // these are contructor parameters
+    // this is intance variable created and assigned to the contructor parameters .
+    this.name = name;
+    this.age = age;
+    this.status = status;
+    this.location = location; // anything written with this. is known as instance variable
+  }
+}
+
+let employeesdatas = new EmployeesData( // this is instance one
+  "Dododile",
+  25,
+  "permanent employee",
+  "Paris"
+);
+let employeesdatas2 = new EmployeesData("Andromede", 5, "permanent", "Paris"); // this is instance 2
+
+// so we have 2 instances , See how the same Class Employees was used for differet instances generating same results with each one having the specified contructor parameters
+// That means, they both have this.firstName and this.lastName instance variables, but each one of them has its own values.
+//This is why we use classes. It is a factory that creates objects conforming to your specifications.
+// notice how all instanee variables are captured along with their parameters in constructor
+
+console.log("Complete Employees Information:", employeesdatas);
+console.log("Complete Employees Information:", employeesdatas2);
+
+// Example 2
+
+class TouristsItineraryData {
+  constructor(flight, date, destination, nationality) {
+    this.flight = flight;
+    this.date = date;
+    this.destination = destination;
+    this.nationality = nationality;
+  }
+}
+
+let tourist1 = new TouristsItineraryData(
+  "Emirates Airlines EK261",
+  27 - 12 - 2024,
+  "Paris",
+  "French"
+);
+let tourist2 = new TouristsItineraryData(
+  "France Airways FFA717",
+  10 / 10 / 2024,
+  "Oslo",
+  "German"
+);
+let tourist3 = new TouristsItineraryData(
+  "Lufthansa Airways 222X",
+  11 - 11 - 2024,
+  "Berlin",
+  "Swiss"
+);
+let tourist4 = new TouristsItineraryData(
+  "Sophie & Dodo Airways",
+  1 - 1 - 2025,
+  "Geneva",
+  "International Citizen"
+);
+console.log("Tourists Itinerary Data:", tourist1, tourist2);
+console.log("Tourists Itinerary Data:", tourist3, tourist4);
+
+// Chapter 77 Instance Methods /  Adding Functions To Instances !
+
+class VehiclesData {
+  constructor(make, manufacturer, model) {
+    this.make = make;
+    this.manufacturer = manufacturer;
+    this.model = model;
+  }
+
+  fullDetails() {
+    return `${this.make} ${this.manufacturer} ${this.model}`; // this is instance method
+  }
+}
+
+let vehicle1 = new VehiclesData("Camry", "Toyota", 2024);
+console.log("VehiclesData:", vehicle1.fullDetails()); // this is implementing instance method !!  So as you can see in the results how Camry Toyota 2024 has been printed .
+console.log("VehiclesData:", vehicle1);
+
+// Another Example
+
+class PresidentialElections {
+  constructor(name, Age) {
+    this.name = name;
+    this.Age = Age;
+  }
+  checkEligibilityOfCandidates() {
+    if (this.Age >= 65) {
+      return `Dear ${this.name} You Are Eligible To Run For The Elections`;
+    } else {
+      return `Dear ${this.name} You Are Not Eligible This Time `;
+    }
+  }
+}
+
+let presidentApplicant1 = new PresidentialElections("DodoDile", 60);
+let presidentApplicant2 = new PresidentialElections("Andromede", 68);
+
+console.log(
+  "President Elections:",
+  presidentApplicant1.checkEligibilityOfCandidates()
+);
+console.log(
+  "President Elctions:",
+  presidentApplicant2.checkEligibilityOfCandidates()
+);
+
+// Chapter 79 Final Chapter Class Inheritances !
