@@ -1121,4 +1121,4 @@ console.log(
   presidentApplicant2.checkEligibilityOfCandidates()
 );
 
-// Chapter 79 Final Chapter Class Inheritances !
+// Chapter 79 Final Chapter Class Inheritances . Parent Class Extending Child Class
